@@ -4,7 +4,6 @@ from flask import Flask, redirect, render_template, request
 app = Flask(__name__)
 
 subjects = {}
-colors = []
 
 @app.route("/")
 def index():
@@ -23,10 +22,7 @@ def index():
             perc=round(perc)
         except:
             perc = 0
-        if perc == 100:
-            colors.append("aquamarine")
-        else:
-            colors.append("darkred")
+            
         subjects[s[1]] = perc
     
     return render_template("index.html", subjects=subjects)
