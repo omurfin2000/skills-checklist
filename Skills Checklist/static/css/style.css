@@ -1,0 +1,49 @@
+button {
+    font-size: 8px;
+    padding: 8px;
+    border: none;
+    color: chocolate;
+    width: max-content;
+}
+
+img {
+    border-radius: 8px;
+    width: 150px;
+    padding: 5px;
+}
+
+table {
+    border: none;
+    width: 40%;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3 {
+    color: bisque;
+    text-align: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+tbody {
+    font-family: Verdana;
+    font-size: 15px;
+    border: none;
+}
+
+th {
+    border: none;
+}
+
+td {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    width: fit-content;
+}
+
+a {
+    color:cadetblue;
+}

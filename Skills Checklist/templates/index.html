@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h2>Computing Skills</h2>
+    <h3>Subjects</h3>
+    <table>
+        <tbody>
+            {% for s in subjects %}
+                <tr>
+                    <td><a href="/subjects?subject={{ s }}">{{ s }}</a></td>
+                    <td>{{ subjects.get(s) }}% complete</td>
+                    <td><img src="/static/images/{{ s }}.png" alt="No Image"></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

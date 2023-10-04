@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h2>{{ subject }}</h2>
+    <h3>Topics</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Complete?</th>
+                <th>Alter Table</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in topics %}
+                <tr>
+                    <td>{{ t }}</td>
+                    <td>{{ topics.get(t) }}</td>
+                    <td>
+                        <form action="/complete?subject={{ subject }}" method="post">
+                            <input type="hidden" name="topic" value="{{ t }}">
+                            <button type="submit">Complete</button>
+                        </form>
+                        <form action="/uncomplete?subject={{ subject }}" method="post">
+                            <input type="hidden" name="topic" value="{{ t }}">
+                            <button type="submit">Uncomplete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
